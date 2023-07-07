@@ -1,0 +1,8 @@
+{
+  "name": "MyUtilitiesApp2.1",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
