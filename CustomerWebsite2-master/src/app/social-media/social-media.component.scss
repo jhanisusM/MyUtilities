@@ -1,0 +1,12 @@
+.social-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+img {
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+  padding-bottom: 0;
+}
