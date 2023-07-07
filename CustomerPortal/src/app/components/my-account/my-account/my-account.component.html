@@ -1,0 +1,74 @@
+<div class="text-container">
+  <div class="mat-h1 section-info">
+    Account Settings
+  </div>
+  <div class="mat-h3 section-info">
+    Change the info used on your account
+  </div>
+  <div class="mat-h3 section-info">
+    For any questions regarding your account number or address please contact the utility.
+    <a href="" style="text-decoration: none; color: #1F56B3;">Learn more.</a>
+  </div>
+</div>
+
+<div class="wrapper">
+<div class="account-container fadeInUp">
+  <mat-list class="list-container">
+    <div class="mat-headline category">Profile</div>
+
+    <mat-list-item id="avatar-item" mat-ripple matRippleCentered (click)="openPhotoDialog()">
+      <img id="avatar" matListAvatar [src]="photo" alt="...">
+      <h4 mat-line>Profile Image</h4>
+      <p mat-line>A photo helps personalize your account</p>
+    </mat-list-item>
+
+    <mat-divider></mat-divider>
+
+    <mat-list-item mat-ripple matRippleCentered (click)="openPasswordDialog()">
+      <mat-icon mat-list-icon>vpn_key</mat-icon>
+      <h4 mat-line>Password</h4>
+      <p mat-line>*********</p>
+    </mat-list-item>
+
+    <mat-divider></mat-divider>
+
+    <div class="mat-headline category" style="margin-top: 25px;">Contact Info</div>
+    <mat-list-item mat-ripple matRippleCentered  (click)="openEmailDialog()">
+      <mat-icon mat-list-icon>email</mat-icon>
+      <h4 mat-line>Email</h4>
+      <p mat-line>{{ email }}</p>
+    </mat-list-item>
+
+    <mat-divider></mat-divider>
+
+    <mat-list-item mat-ripple matRippleCentered (click)="openPhoneDialog()">
+      <mat-icon mat-list-icon>phone</mat-icon>
+      <h4 mat-line>Phone</h4>
+      <p mat-line>{{ phone }}</p>
+    </mat-list-item>
+
+    <mat-divider></mat-divider>
+
+    <div class="mat-headline category" style="margin-top: 25px;">Preferences</div>
+      <mat-selection-list>
+        <mat-list-option (click)="enrollInPaperless()">
+        <mat-icon mat-list-icon>eco</mat-icon>
+         <h4 mat-line>Paperless Billing</h4>
+        <p mat-line>Recieve your bill by email only</p>
+        </mat-list-option>
+      </mat-selection-list>
+
+    <mat-divider></mat-divider>
+
+    <mat-selection-list>
+      <mat-list-option (click)="enrollInAutoPay()">
+      <mat-icon mat-list-icon>timelapse</mat-icon>
+       <h4 mat-line>Auto Pay</h4>
+      <p mat-line>Have your bill be paid automatically each month</p>
+      </mat-list-option>
+    </mat-selection-list>
+
+  <mat-divider></mat-divider>
+  </mat-list>
+</div>
+</div>

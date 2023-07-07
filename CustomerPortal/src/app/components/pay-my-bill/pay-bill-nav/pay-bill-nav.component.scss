@@ -1,0 +1,23 @@
+mat-toolbar {
+  background: #FAFAFC;
+  border-bottom: 1px solid lightgray;
+  margin-top: 12px;
+  display: flex;
+}
+
+mat-button-toggle {
+  background: #126BC5;
+  color: white;
+  font-size: 15px;
+  width: 200px;
+
+}
+
+@media (max-width: 566px) {
+  mat-toolbar {
+    justify-content: center;
+  }
+  #pay-bill {
+    margin-right: 0;
+  }
+}
