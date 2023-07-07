@@ -1,0 +1,100 @@
+#background-img {
+  background-image: url('../../../../assets/images/rate-calculator.jpg');
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  &:before {
+    content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+        opacity: .6;
+  }
+}
+
+.page-header-section {
+  text-align: center;
+  height: 400px;
+  position: relative;
+}
+
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  letter-spacing: 1px;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.calc-container {
+  display: flex;
+  flex-direction: column;
+  margin: 3%;
+  padding: 25px;
+}
+
+.calc-container > * {
+  width: 100%;
+}
+
+.page-header-background {
+  overflow: hidden;
+  margin-top: 10px
+}
+
+.flex-container {
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.flex-field {
+  display: inline;
+}
+
+label {
+  padding-bottom: 10px;
+}
+
+.calc-btns {
+  margin: 12px 0;
+  letter-spacing: 1px;
+}
+
+#calc {
+  background: #11293e;
+  color: white;
+}
+
+#reset {
+  color: #11293e;
+}
+
+
+@media screen and (max-width: 864px) {
+  .calc-container {
+    margin: 0;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  label {
+    text-align: center;
+  }
+
+  .page-header-section {
+    text-align: center;
+    height: 300px;
+  }
+}

@@ -1,0 +1,32 @@
+<div class="page-header-background">
+  <div class="page-header-section fadeIn">
+      <div id="background-img"></div>
+      <div class="mat-display-2 center-text">
+       <mat-icon>question_answer</mat-icon>
+       FAQ
+      </div>
+  </div>
+</div>
+<mat-toolbar>
+  <mat-toolbar-row class="tool-bar">
+      <span class="span">You have questions? We have answers.</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="content-wrapper">
+  <mat-tab-group class="tabs">
+
+    <mat-tab label="General FAQ">
+      <app-general-faq></app-general-faq>
+    </mat-tab>
+
+    <mat-tab label="Water Conservation">
+      <app-conservation-faq></app-conservation-faq>
+    </mat-tab>
+
+    <mat-tab label="My Utility Services">
+      <app-utility-faq></app-utility-faq>
+    </mat-tab>
+
+  </mat-tab-group>
+</div>

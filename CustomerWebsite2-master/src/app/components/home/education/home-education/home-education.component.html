@@ -1,0 +1,20 @@
+<div class="social-container">
+    <app-social-media></app-social-media>
+</div>
+<div class="content-container">
+  <div class="col-1">
+    <div class="mat-display-1" style="margin-bottom: 25px;
+         text-decoration: underline;">
+      Home Education
+    </div>
+    <div *ngFor="let article of loadedArticles" style="margin-bottom:35px;">
+      <div class="mat-h2">{{article.title}}</div>
+      <p>{{article.content}}</p>
+    </div>
+  </div>
+  <div class="col-2">
+    <div>
+      <img class="zoomIn" [src]="imgUrl" alt="">
+    </div>
+  </div>
+</div>

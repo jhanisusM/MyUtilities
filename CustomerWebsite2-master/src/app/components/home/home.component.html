@@ -1,0 +1,151 @@
+<div class="page-header-background">
+  <div class="page-header-section fadeIn">
+    <div id="background-img"></div>
+    <div class="mat-display-4 center-text">
+      My Utilities App
+      <div style="display: flex; justify-content: center;">
+        <a href="http://customerportal.myutility.services/#/sign-up" target="_blank" class="portal-link">
+          <button class="download-btn" mat-stroked-button>Sign Up</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<mat-toolbar style="background: white;">
+  <mat-toolbar-row class="tool-bar">
+    <span class="span">Online Resources</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="card-container">
+  <div class="row">
+    <div class="column">
+      <mat-card class="card">
+        <mat-card-header class="card-header">
+          <mat-card-title class="card-title">
+            <a routerLink="/conservation" class="card-link">Conservation</a></mat-card-title>
+        </mat-card-header>
+        <img class="card-img" mat-card-image src="../../../assets/images/MUS_Conservation.svg"
+          alt="Photo of Abstract Leaf">
+        <mat-card-content class="card-content">
+          <p class="card-p">
+            Fresh drinking water is a precious resource. Find ways to preserve water and
+            safeguard our environment here. Learn more in our Conservation section.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button class="learn-btn" mat-raised-button routerLink="/conservation">Learn More</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="break"></div>
+    <div class="column">
+      <mat-card class="card">
+        <mat-card-header class="card-header">
+          <mat-card-title class="card-title"><a routerLink="/education" class="card-link">Education</a>
+          </mat-card-title>
+        </mat-card-header>
+        <img class="card-img" mat-card-image src="../../../assets/images/MUS_Education.svg" alt="Photo of Lightbulb">
+        <mat-card-content class="card-content">
+          <p class="card-p">
+            Is your water bill higher than you expected? Want to know how to read your meter?
+            Discover answers to these questions and more in our Education section.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button class="learn-btn" mat-raised-button routerLink="/education">Learn More</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="break"></div>
+    <div class="column">
+      <mat-card class="card">
+        <mat-card-header class="card-header">
+          <mat-card-title class="card-title"><a routerLink="/rate-calculator" class="card-link">Rate Calculator</a>
+          </mat-card-title>
+        </mat-card-header>
+        <img class="card-img" mat-card-image src="../../../assets/images/MUS_Calculator.svg" alt="Photo of Calculator">
+        <mat-card-content class="card-content">
+          <p class="card-p">
+            Need help calculating your rates? Use our Rate Calculator and
+            get a good idea of what your rates will be based on your usage.
+            Never let your rates surprise you.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button class="learn-btn" mat-raised-button routerLink="/rate-calculator">Learn More</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+<div class="announcement-container">
+  <div class="row-img">
+    <div class="column" style="padding: 0;">
+      <div class="page-header-background" style="margin-top: 0;">
+        <div class="page-header-section fadeIn outage-header-section">
+          <div id="planned-outage-img"></div>
+          <div class="mat-display-3 center-text">
+            Planned Outage
+            <div style="display: flex; justify-content: center;">
+              <a routerLink="/announcements/planned-outage" style="color:white;">
+                <button class="download-btn" mat-stroked-button>View Details</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column" style="padding: 0;">
+      <div class="page-header-background" style="margin-top: 0;">
+        <div class="page-header-section fadeIn outage-header-section">
+          <div id="board-meeting-img"></div>
+          <div class="mat-display-3 center-text">
+            Board Meeting
+            <div style="display: flex; justify-content: center;">
+              <a routerLink="/announcements/board-meeting" style="color:white;">
+                <button class="download-btn" mat-stroked-button>View Details</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<mat-toolbar>
+  <mat-toolbar-row class="tool-bar">
+    <a routerLink="/announcements" class="span">
+      <span>
+        <button mat-raised-button class="view-all-btn">
+          All Announcements
+          <i class="material-icons">
+            chevron_right
+          </i>
+        </button>
+      </span>
+    </a>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="mat-display-2 app-headline">
+  Get the My Utilities App
+</div>
+<div class="app-container">
+  <div class="row" style="justify-content: center;">
+    <img class="img-app anim" src="../../../assets/images/smartphone.png" alt="">
+  </div>
+</div>
+<div class="container">
+  <div class="mat-headline app-sub-headline">
+    Includes features like: Bill Pay, Outage Reporting, Education and Conservation information, Rate Calculator, Past
+    Usage, and so much more. Download the MyUtilities App Now!
+  </div>
+</div>
+<div class="container">
+  <img class="app-badge" src="../../../assets/images/app-store-badges/appleStoreBadge.svg" alt="">
+  <img class="app-badge" id="google-badge" src="../../../assets/images/app-store-badges/googleStoreBadge.png" alt="">
+</div>

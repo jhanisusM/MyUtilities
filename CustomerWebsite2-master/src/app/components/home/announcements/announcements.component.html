@@ -1,0 +1,54 @@
+<div class="page-header-background">
+  <div class="page-header-section fadeIn">
+    <div id="background-img"></div>
+    <div class="mat-display-2 center-text">
+      <mat-icon>notifications_active</mat-icon>
+      Announcements
+    </div>
+  </div>
+</div>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav mode="side" [(opened)]="opened" class="sidenav">
+    <mat-toolbar style="background: white; border-bottom: 1px solid lightgray;">
+      Announcements
+    </mat-toolbar>
+    <mat-nav-list *ngFor="let announcement of announcements$ | async">
+      <a class="nav-links" mat-list-item [routerLink]="['/announcements', announcement.id]">
+        {{announcement.title}}
+      </a>
+      <mat-divider></mat-divider>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content style="background:white;">
+    <button mat-button (click)="opened=!opened" style="font-size: 17px; padding: 15px;">
+      <i class="material-icons">
+        menu_open
+      </i>
+    <span style="padding:5px">Announcements Menu</span>
+    </button>
+    <div class="social-container">
+      <app-social-media></app-social-media>
+    </div>
+    <div class="content-container">
+      <div class="col-1">
+        <div class="mat-display-1" style="margin-bottom: 25px;
+               text-decoration: underline;">
+          Utility Announcements
+        </div>
+        <div style="margin-bottom:35px;">
+          <div class="mat-h2">Stay Up to Date On Everything From Outages to Events</div>
+          <p>We don't want to leave you high and dry. We prefer you don't find out about a planned outage
+            because you go home and your faucet doesn't work. Neither do we want you to miss out on important meetings
+            where customer concerns are often vocalized. This section is dedicated to keeping you in the know.
+          </p>
+        </div>
+      </div>
+      <div class="col-2">
+        <div>
+          <img [src]="imgUrl" alt="">
+        </div>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

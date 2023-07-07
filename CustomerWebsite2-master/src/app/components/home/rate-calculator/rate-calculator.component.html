@@ -1,0 +1,64 @@
+<div class="page-header-background">
+  <div class="page-header-section fadeIn">
+    <div id="background-img"></div>
+    <div class="mat-display-2 center-text">
+      <mat-icon>assessment</mat-icon>
+      Rate Calculator
+    </div>
+  </div>
+</div>
+
+<div class="calc-container">
+  <div class="mat-display-1 header">Water Usage</div>
+  <label>Enter the amount of water usage either in CCF or in Gallons. 1 CCF is 748 gallons.</label>
+  <mat-form-field>
+    <input matInput placeholder="Enter CCF Amount to Calculate Gallons">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Enter Gallon Amount to Calculate CCF">
+  </mat-form-field>
+
+  <div class="mat-display-1 header" style="margin-top: 64px;">Property Information</div>
+  <label>Enter zip code, lot size, and length of time to calculate the cost of water usage.</label>
+  <div fxLayout="column" fxLayoutAlign="center stretch" class="row"></div>
+  <mat-form-field>
+    <input matInput placeholder="Zip Code">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Lot Size</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let lot of lotSizes" [value]="lot.value">
+        {{lot.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div class="flex-container">
+    <div class="flex-field" style="padding-right: 25px;">
+      <mat-form-field color="accent">
+        <mat-label>Start Date</mat-label>
+        <input matInput [matDatepicker]="picker1">
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div class="flex-field">
+      <mat-form-field color="accent">
+        <mat-label>End Date</mat-label>
+        <input matInput [matDatepicker]="picker2">
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2 color="primary"></mat-datepicker>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <mat-form-field>
+    <input matInput placeholder="Duration (50-60) days">
+  </mat-form-field>
+
+  <button class="calc-btns" id="calc" mat-raised-button>Calculate</button>
+  <button class="calc-btns" id="reset" mat-raised-button>Reset</button>
+</div>

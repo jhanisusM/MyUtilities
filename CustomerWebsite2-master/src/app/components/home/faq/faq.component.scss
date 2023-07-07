@@ -1,0 +1,84 @@
+.page-header-background {
+  overflow: hidden;
+  margin-top: 10px
+}
+
+.tool-bar {
+  min-height: 125px;
+  background: linear-gradient(141deg, rgb(245, 244, 244) 25%, rgb(245, 244, 244) 40%, rgb(252, 249, 249) 55%);
+  border-bottom: 1px solid #ededed;
+}
+
+.span {
+  margin: auto;
+  color: #11293e;
+  font-size: 1.5em;
+  font-weight: lighter;
+}
+
+#background-img {
+  background-image: url('../../../../assets/images/faq.jpg');
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  &:before {
+    content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+        opacity: .6;
+  }
+}
+
+.page-header-section {
+  text-align: center;
+  height: 400px;
+  position: relative;
+}
+
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  letter-spacing: 1px;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.page-header-headline {
+  color: white;
+}
+
+.content-wrapper {
+  padding-top: 25px;
+  margin: 15px;
+  margin-bottom: 55px;
+  min-height: 500px;
+}
+
+.tabs {
+  margin: 15px;
+}
+
+@media screen and (max-width: 864px) {
+  .content-wrapper {
+    margin: 0;
+    padding: 0;
+  }
+
+  .span {
+    font-size: 5vw;
+  }
+
+  .page-header-section {
+    text-align: center;
+    height: 300px;
+  }
+}

@@ -1,0 +1,21 @@
+<div class="social-container">
+  <app-social-media></app-social-media>
+</div>
+<div class="content-container" *ngIf="announcement$ | async as announcement">
+<div class="col-1">
+  <div class="mat-display-1" style="margin-bottom: 25px;
+       text-decoration: underline;">
+  {{ announcement.title}}
+  </div>
+  <div style="margin-bottom:35px;">
+    <p>{{ announcement.content }}</p>
+  </div>
+  <div style="padding-bottom: 1em;">Published: {{announcement.date | date}}</div>
+  <div><a routerLink="/announcements" class="all-outage-link">View All Announcements</a></div>
+</div>
+<div class="col-2">
+  <div>
+    <img [src]= "announcement.img" alt="">
+  </div>
+</div>
+</div>

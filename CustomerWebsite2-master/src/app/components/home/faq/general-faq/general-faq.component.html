@@ -1,0 +1,8 @@
+<mat-accordion>
+    <mat-expansion-panel *ngFor="let article of loadedArticles">
+      <mat-expansion-panel-header>
+        <mat-panel-title class="article-title">{{ article.title }}</mat-panel-title>
+      </mat-expansion-panel-header>
+        {{ article.content }}
+    </mat-expansion-panel>
+  </mat-accordion>
