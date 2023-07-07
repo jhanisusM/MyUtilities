@@ -1,0 +1,70 @@
+<h1 mat-dialog-title style="position: relative;">
+    Sign Up for Auto Pay
+    <span class="material-icons" id="cancel-btn" (click)="Cancel()">
+        clear
+    </span>
+</h1>
+<hr>
+<mat-dialog-content class="mat-typography">
+    <mat-accordion style="margin: 25px 5px;">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>What is Auto Pay?</mat-panel-title>
+            </mat-expansion-panel-header>
+            Auto Pay is a service that allows you to have your utility bill paid automatically from your checking or
+            savings
+            account.
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>How Much Does Auto Pay Cost?</mat-panel-title>
+            </mat-expansion-panel-header>
+            There is no charge from the utility to have your utility bill paid automatically from a checking or savings
+            account. However,
+            your financial institution may have a fee. If choosing to pay by credit/debit card, a convenience fee of
+            $1.90 will apply.
+            Payments rejected by your financial institution will incur additional fees.
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>How Do I Sign Up For Auto Pay?</mat-panel-title>
+            </mat-expansion-panel-header>
+            Complete the authorization form below. Attach a voided check if paying from a checking account or a deposit
+            slip
+            if paying from a savings account.
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>How Will I Know How Much Is Being Deducted From My Bank Account?</mat-panel-title>
+            </mat-expansion-panel-header>
+            You will continue to receive a utility bill. The Auto Pay bill will remind you not to mail a payment and it
+            will
+            show the total dollar amount and date your account will be debited.
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>When Will Auto Pay Become Effective?</mat-panel-title>
+            </mat-expansion-panel-header>
+            It may take one or two billing periods to activate Auto Pay. Please continue to mail your payments until you
+            receive a bill that says, “Do not mail your payment.”
+        </mat-expansion-panel>
+    </mat-accordion>
+
+    <h1 mat-dialog-title>Automatic Bill Payment (ABP) Setup Information</h1>
+    <hr>
+    <div id="payment-option-container">
+        <div class="mat-h3" style="margin-bottom: 10px;">Payment Method</div>
+        <mat-radio-group [(ngModel)]="paymentMethod" [ngModelOptions]="{standalone: true}">
+            <mat-radio-button *ngFor="let option of paymentOptions" [value]="option" 
+                              (click)="smoothScroll()">{{option}}
+            </mat-radio-button>
+        </mat-radio-group>
+    </div>
+    <div id="smoothScrollTarget"></div>
+    <div *ngIf="paymentMethod === 'Bank Account'">
+        <app-pay-bank-institution></app-pay-bank-institution>
+    </div>
+    <div *ngIf="paymentMethod === 'Credit/Debit Card'">
+        <app-pay-credit-debit></app-pay-credit-debit>
+    </div>
+</mat-dialog-content>

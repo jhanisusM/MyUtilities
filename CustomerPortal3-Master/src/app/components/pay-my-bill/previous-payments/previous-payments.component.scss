@@ -1,0 +1,175 @@
+.page-wrapper {
+  width: 100%;
+  padding: 0;
+}
+
+.detail-container {
+  flex: 1;
+  overflow: hidden;
+  height: 1%;
+}
+
+#bill-detail-header {
+  background:#11293e;
+  color: white;
+  justify-content: center;
+}
+
+.row-detail {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  text-align: center;
+  padding: 25px;
+  border-bottom: 1px solid lightgray;
+}
+
+.sm-col {
+  flex: 1;
+}
+
+.row-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  padding: 0;
+}
+
+.sect-header {
+  text-align: center;
+  padding: 10px;
+  margin: 0 0 0 !important;
+}
+
+.col-list {
+  flex: 1;
+  max-width: 400px;
+  border: 1px solid lightgray;
+  border-top: none;
+  height: 100vh;
+  padding: 0;
+}
+
+mat-list-item {
+  height: 135px !important;
+  cursor: pointer;
+  transition: all .2s ease-in ;
+}
+
+mat-list-item:hover {
+  background:#FAFAFC;
+  box-shadow: 0 10px 20px rgba(0,0,0,.19), 0 6px 6px rgba(0,0,0,.23);
+}
+
+.mat-line {
+  padding: 5px !important;
+}
+
+mat-list-item h3 {
+  font-size: 1.2em !important;
+}
+
+#card-num {
+  text-decoration: underline;
+}
+
+#amount-paid {
+  color: #126BC5;
+}
+
+#paid-date {
+  color: #939393;
+}
+
+.mobile-link {
+  display: none;
+  width: 200px;
+}
+
+.mobile-link button {
+  color: #0056B3;
+}
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-75%, 0, 0);
+    transform: translate3d(-75%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-75%, 0, 0);
+    transform: translate3d(-75%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+  -webkit-animation-duration: .7s;
+  animation-duration: .7s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@media (max-width: 864px) {
+  .row-container {
+    display: block;
+  }
+
+  .mobile-link {
+    display: block;
+  }
+
+  mat-list-item:hover {
+    background: white;
+    box-shadow: none;
+  }
+
+  .col-list {
+    width: 100% !important;
+    overflow: hidden;
+    max-width: 1000px;
+    height: 1%;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  mat-list {
+    width: 100%;
+  }
+
+  .page-wrapper {
+    height: 100vh;
+  }
+
+  mat-list-item {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .mobile {
+    display: none;
+  }
+}

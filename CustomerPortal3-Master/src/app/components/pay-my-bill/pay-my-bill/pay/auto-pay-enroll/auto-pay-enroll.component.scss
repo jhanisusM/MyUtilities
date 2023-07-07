@@ -1,0 +1,27 @@
+
+ .form-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  #payment-option-container {
+    width: 100%;
+  }
+
+  .mat-radio-button {
+    padding-right: 6px;
+    padding-bottom: 15px;
+  }
+
+  #cancel-btn {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+
+  @media (max-width: 770px) {
+    .mat-expansion-panel {
+      padding: 8px;
+    }
+  }
